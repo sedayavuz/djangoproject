@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <style>
+ #menu{
+   position:absolute;
+   margin-left:50%;
+ }
+ #duyurular{
+
+ }
+ </style>
+</head>
+<body>
+  <img  src="https://scontent-vie1-1.cdninstagram.com/hphotos-xta1/t51.2885-19/s150x150/12107537_166971030319596_1886850615_a.jpg">
+  <section id="menu">
+    <a href="/yonetim">Yonetim</a>
+    <a href="/contact">İletisim</a>
+  </section>
+  <section id="duyurular">
+{% for element in posts %}
+<h1> {{element.title}}</h1>
+<p> {{element.text}} </p>
+{% endfor %}
+</section>
+</body>
+</html>
