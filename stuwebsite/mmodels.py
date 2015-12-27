@@ -8,3 +8,4 @@ class Messages(models.Model):
      tel = models.CharField(max_length=150)
      mail = models.CharField(max_length=200)
      message = models.TextField(default="deger gir")
+     
