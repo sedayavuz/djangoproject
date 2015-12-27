@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
+from django.conf.urls.static import static
+from django.conf import settings
 import stuwebsite.views
 
 urlpatterns = [
@@ -26,4 +27,4 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^contact$',stuwebsite.views.post_new),
 
-]
+]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

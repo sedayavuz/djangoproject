@@ -27,8 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+STATIC_URL = '/static/'
 
+STATIC_ROOT = ''
 # Application definition
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    '/home/seda/final/final/static/',
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',

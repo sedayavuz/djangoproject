@@ -1,8 +1,53 @@
-{% for yonetici in yoneticiler %}
+<!DOCTYPE HTML>
+<html>
+<head>
+  <style>
+ #menu{
+   position:absolute;
+   margin-left:50%;
+ }
+ #duyurular{
+   border-radius: 6px;
+   border:1px;
+ }
+ </style>
+ {% load staticfiles %}
+ <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <link rel="stylesheet" href="{% static  "main.css" %}" />
+</head>
+<body>
 
- <p>Yonetici ismi: {{yonetici.name}}</p>
-  <b>Yonetici mail:{{yonetici.mail}}</b> <br>
-  <i>Yonetici no: {{yonetici.phone_number}}</i>
-<p>-----------------------</p>
-<br>
-{% endfor %}
+    <section id="sidebar">
+        <img  src="https://scontent-vie1-1.cdninstagram.com/hphotos-xta1/t51.2885-19/s150x150/12107537_166971030319596_1886850615_a.jpg">
+      <div class="inner">
+      <a href="/yonetim">Who We Are</a>
+      <a href="/contact">Contact</a>
+      <a href="/events">Events</a>
+    </div>
+    </section>
+    <div id="wrapper">
+
+    <section id="intro"  class="wrapper style1 fullscreen fade-up">
+      <div class="inner">
+        {% for yonetici in yoneticiler %}
+
+         <p>Yonetici ismi: {{yonetici.name}}</p>
+          <b>Yonetici mail:{{yonetici.mail}}</b> <br>
+          <i>Yonetici no: {{yonetici.phone_number}}</i><p></p>
+          <i>Yonetici task: {{yonetici.task}}</i>
+        <p>-----------------------</p>
+        <br>
+        {% endfor %}
+</div>
+</section>
+</div>
+<script src="{% static "assets/js/jquery.scrollex.min.js" %}"></script>
+<script src="{% static "assets/js/jquery.scrolly.min.js" %}"></script>
+<script src="{% static "assets/js/skel.min.js" %}"></script>
+<script src="{% static "assets/js/util.js" %}"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="{% static "assets/js/main.js" %}"></script>
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</body>
+</html>
